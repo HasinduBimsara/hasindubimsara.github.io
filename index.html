@@ -731,6 +731,30 @@
   color: var(--bg-primary);
   transform: translateY(-4px);
 }
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: var(--primary-color);
+  color: var(--bg-primary);
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0, 245, 255, 0.3);
+  transition: background 0.3s ease, transform 0.3s ease;
+  z-index: 10000;
+}
+
+#backToTop:hover {
+  background: var(--accent-color);
+  transform: translateY(-3px);
+}
     </style>
   </head>
   <body>
@@ -1162,8 +1186,12 @@
     <a href="https://instagram.com/hasindu_bimsara_" aria-label="Instagram" target="_blank" rel="noopener">
       <i class="fab fa-instagram"></i>
     </a>
+    <button id="backToTop" aria-label="Back to Top" title="Back to Top">
+  <i class="fas fa-arrow-up"></i>
+</button>
   </div>
 </section>
+
       <p>© 2025 Hasindu Bimsara. All rights reserved.</p>
     </footer>
 
@@ -1435,6 +1463,22 @@
       `;
     document.head.appendChild(style);
   });
+  const backToTopBtn = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.display = "flex";
+  } else {
+    backToTopBtn.style.display = "none";
+  }
+});
+
+backToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
 </script>
   </body>
 </html>
