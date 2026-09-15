@@ -13,6 +13,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
     <style>
       * {
         margin: 0;
@@ -85,6 +89,21 @@
         font-weight: 800;
         color: var(--primary-color);
         text-decoration: none;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .nav-logo-img {
+        height: 36px;
+        width: auto;
+        border-radius: 6px;
+        object-fit: contain;
+        transition: transform 0.3s ease;
+      }
+
+      .logo:hover .nav-logo-img {
+        transform: scale(1.08);
       }
 
       .nav-links {
@@ -388,49 +407,237 @@
         font-size: 0.9rem;
       }
 
-      /* Skills Section */
-      .skills-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-      }
-
-      .skill-category {
-        background: var(--bg-secondary);
-        padding: 2rem;
-        border-radius: 20px;
-        transition: all 0.3s ease;
-      }
-
-      .skill-category:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 20px 40px rgba(0, 245, 255, 0.1);
-      }
-
-      .skill-category h3 {
-        color: var(--primary-color);
-        margin-bottom: 1.5rem;
-        font-size: 1.3rem;
-      }
-
-      .skill-items {
+      /* Skills Section - Modern Tech Grid */
+      .skills-container {
         display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
+        flex-direction: column;
+        gap: 3.5rem;
       }
 
-      .skill-item {
-        background: var(--bg-tertiary);
-        padding: 0.5rem 1rem;
-        border-radius: 25px;
+      .category-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+        gap: 0.75rem;
+      }
+
+      .category-icon-box {
+        width: 32px;
+        height: 32px;
+        border: 1px solid rgba(0, 245, 255, 0.4);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--primary-color);
+        font-size: 0.85rem;
+        background: rgba(0, 245, 255, 0.05);
+        flex-shrink: 0;
+      }
+
+      .category-title {
         font-size: 0.9rem;
-        color: var(--text-secondary);
-        transition: all 0.3s ease;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--text-primary);
+        white-space: nowrap;
       }
 
-      .skill-item:hover {
-        background: var(--primary-color);
-        color: var(--bg-primary);
+      .category-line {
+        flex: 1;
+        height: 1px;
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.03) 100%);
+      }
+
+      .category-badge {
+        font-family: monospace;
+        font-size: 0.65rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--primary-color);
+        border: 1px solid var(--primary-color);
+        padding: 3px 8px;
+        border-radius: 4px;
+        background: rgba(0, 245, 255, 0.05);
+        box-shadow: 0 0 10px rgba(0, 245, 255, 0.2);
+        white-space: nowrap;
+      }
+
+      .skills-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+        gap: 1.25rem;
+      }
+
+      .skill-card {
+        background: rgba(13, 20, 36, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 1.6rem 1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0.85rem;
+        text-align: center;
+        transition: all 0.25s ease-in-out;
+        cursor: pointer;
+        backdrop-filter: blur(5px);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .skill-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: radial-gradient(circle at center, color-mix(in srgb, var(--brand-color, var(--primary-color)) 20%, transparent) 0%, transparent 75%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .skill-card:hover {
+        transform: translateY(-6px);
+        background: rgba(18, 28, 50, 0.95);
+        border-color: var(--brand-color, var(--primary-color));
+        box-shadow: 0 10px 25px -5px color-mix(in srgb, var(--brand-color, var(--primary-color)) 40%, transparent), 0 0 15px color-mix(in srgb, var(--brand-color, var(--primary-color)) 25%, transparent);
+      }
+
+      .skill-card:hover::before {
+        opacity: 1;
+      }
+
+      .skill-card i {
+        font-size: 2.3rem;
+        color: #8b9cb6;
+        transition: all 0.25s ease;
+        position: relative;
+        z-index: 1;
+      }
+
+      .skill-card:hover i {
+        color: var(--brand-color, var(--primary-color));
+        transform: scale(1.15);
+      }
+
+      .skill-card-name {
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: #cbd5e1;
+        transition: color 0.25s ease;
+        position: relative;
+        z-index: 1;
+        font-family: "Inter", sans-serif;
+      }
+
+      }
+
+      .skill-card-sub {
+        font-size: 0.65rem;
+        color: #8b9cb6;
+        margin-top: -0.3rem;
+        line-height: 1.2;
+        font-weight: 500;
+        transition: color 0.25s ease;
+        position: relative;
+        z-index: 1;
+      }
+
+      .skill-card:hover .skill-card-sub {
+        color: #e2e8f0;
+      }
+
+      /* Filter Tabs */
+      .skills-filter-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-bottom: 3rem;
+      }
+
+      .skill-filter-btn {
+        background: rgba(13, 20, 36, 0.8);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: var(--text-secondary);
+        padding: 0.6rem 1.4rem;
+        border-radius: 30px;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      .skill-filter-btn:hover,
+      .skill-filter-btn.active {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: #000;
+        border-color: transparent;
+        box-shadow: 0 0 20px rgba(0, 245, 255, 0.4);
+        transform: translateY(-2px);
+      }
+
+      .skill-category-group {
+        transition: opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      /* Light Theme Adjustments */
+      .light-theme .skill-card {
+        background: #ffffff;
+        border-color: rgba(0, 0, 0, 0.08);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .light-theme .skill-card:hover {
+        background: #ffffff;
+        border-color: var(--brand-color, var(--primary-color));
+        box-shadow: 0 10px 25px -5px color-mix(in srgb, var(--brand-color, var(--primary-color)) 30%, transparent);
+      }
+
+      .light-theme .skill-card i {
+        color: #64748b;
+      }
+
+      .light-theme .skill-card:hover i {
+        color: var(--brand-color, var(--primary-color));
+      }
+
+      .light-theme .skill-card-name {
+        color: #334155;
+      }
+
+      .light-theme .category-line {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.03) 100%);
+      }
+
+      .light-theme .category-icon-box {
+        border-color: rgba(0, 119, 255, 0.4);
+        background: rgba(0, 119, 255, 0.08);
+      }
+
+      .light-theme .skill-filter-btn {
+        background: #f1f5f9;
+        border-color: #cbd5e1;
+        color: #475569;
+      }
+
+      .light-theme .skill-filter-btn:hover,
+      .light-theme .skill-filter-btn.active {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: #ffffff;
+      }
+
+      .light-theme .skill-card-sub {
+        color: #64748b;
       }
 
       /* Projects Section */
@@ -766,7 +973,10 @@
 
     <nav class="navbar" id="navbar">
       <div class="nav-container">
-        <a href="#home" class="logo">Hasindu Bimsara</a>
+        <a href="#home" class="logo">
+          <img src="Images/logo.png" alt="Hasindu Bimsara Logo" class="nav-logo-img" />
+          <span>Hasindu Bimsara</span>
+        </a>
         <ul class="nav-links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -864,94 +1074,386 @@
     </section>
 
     <section id="skills" class="section">
-      <h2 class="section-title">Skills & Technologies</h2>
+      <h2 class="section-title">Technical <span style="color: var(--primary-color);">Skills</span></h2>
       <p class="section-subtitle">
-        A comprehensive toolkit for building modern web applications and digital
-        experiences.
+        My technology toolbelt, specialized in cybersecurity, cloud infrastructure, full-stack development, AI, and modern dev tools.
       </p>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3><i class="fas fa-code"></i> Frontend Development</h3>
-          <div class="skill-items">
-            <span class="skill-item"><i class="fab fa-react"></i> React</span>
-            <span class="skill-item"><i class="fab fa-vue"></i> Vue.js</span>
-            <span class="skill-item"><i class="fab fa-ts"></i> TypeScript</span>
-            <span class="skill-item"><i class="fab fa-js"></i> JavaScript</span>
-            <span class="skill-item"><i class="fab fa-html"></i> HTML5</span>
-            <span class="skill-item"><i class="fab fa-css"></i> CSS3</span>
-            <span class="skill-item"
-              ><i class="fab fa-scss"></i> Sass/SCSS</span
-            >
-            <span class="skill-item"
-              ><i class="fab fa-tailwind"></i> Tailwind CSS</span
-            >
-            <span class="skill-item"><i class="fab fa-next"></i> Next.js</span>
-            <span class="skill-item"><i class="fab fa-nuxt"></i> Nuxt.js</span>
+
+      <!-- Category Filter Tabs -->
+      <div class="skills-filter-wrapper">
+        <button class="skill-filter-btn active" data-filter="all"><i class="fas fa-th-large"></i> All Skills</button>
+        <button class="skill-filter-btn" data-filter="cloud-devops"><i class="fas fa-cloud"></i> Cloud & DevOps</button>
+        <button class="skill-filter-btn" data-filter="security-networking"><i class="fas fa-shield-halved"></i> Cybersecurity & Networking</button>
+        <button class="skill-filter-btn" data-filter="fullstack-languages"><i class="fas fa-code"></i> Full-Stack & Languages</button>
+        <button class="skill-filter-btn" data-filter="ai-data"><i class="fas fa-brain"></i> AI & Data</button>
+        <button class="skill-filter-btn" data-filter="design-tools"><i class="fas fa-pen-ruler"></i> Design & Tools</button>
+      </div>
+
+      <div class="skills-container">
+        <!-- Category 1: Cloud Computing, DevOps & Infrastructure (CORE FOCUS) -->
+        <div class="skill-category-group" data-category="cloud-devops">
+          <div class="category-header">
+            <div class="category-icon-box">
+              <i class="fas fa-cloud"></i>
+            </div>
+            <span class="category-title">Cloud Computing, DevOps & CI/CD</span>
+            <div class="category-line"></div>
+            <span class="category-badge">Core Focus</span>
+          </div>
+          <div class="skills-cards-grid">
+            <div class="skill-card" style="--brand-color: #FF9900;">
+              <i class="fab fa-aws"></i>
+              <span class="skill-card-name">AWS</span>
+              <span class="skill-card-sub">EC2, S3, VPC, IAM, Lambda, EKS, ECS</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #0078D4;">
+              <i class="devicon-azure-plain"></i>
+              <span class="skill-card-name">Azure</span>
+              <span class="skill-card-sub">Cloud Infra & VMs</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #F80000;">
+              <i class="devicon-oracle-original"></i>
+              <span class="skill-card-name">Oracle Cloud</span>
+              <span class="skill-card-sub">OCI Services</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #F38020;">
+              <i class="devicon-cloudflare-plain"></i>
+              <span class="skill-card-name">Cloudflare</span>
+              <span class="skill-card-sub">CDN & Edge Security</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #2496ED;">
+              <i class="devicon-docker-plain"></i>
+              <span class="skill-card-name">Docker</span>
+              <span class="skill-card-sub">Docker & Compose</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #326CE5;">
+              <i class="devicon-kubernetes-plain"></i>
+              <span class="skill-card-name">Kubernetes</span>
+              <span class="skill-card-sub">Orchestration</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #844FBA;">
+              <i class="devicon-terraform-plain"></i>
+              <span class="skill-card-name">Terraform</span>
+              <span class="skill-card-sub">IaC Automation</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #EE0000;">
+              <i class="devicon-ansible-plain"></i>
+              <span class="skill-card-name">Ansible</span>
+              <span class="skill-card-sub">Config Management</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #D24939;">
+              <i class="devicon-jenkins-line"></i>
+              <span class="skill-card-name">Jenkins</span>
+              <span class="skill-card-sub">CI/CD Automation</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #2088FF;">
+              <i class="devicon-githubactions-plain"></i>
+              <span class="skill-card-name">GitHub Actions</span>
+              <span class="skill-card-sub">CI/CD Workflows</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #E6522C;">
+              <i class="devicon-prometheus-plain"></i>
+              <span class="skill-card-name">Prometheus</span>
+              <span class="skill-card-sub">Metrics & Alerting</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #F46800;">
+              <i class="devicon-grafana-plain"></i>
+              <span class="skill-card-name">Grafana</span>
+              <span class="skill-card-sub">Observability</span>
+            </div>
           </div>
         </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-server"></i> Backend Development</h3>
-          <div class="skill-items">
-            <span class="skill-item"><i class="fab fa-node"></i> Node.js</span>
-            <span class="skill-item"
-              ><i class="fab fa-express"></i> Express.js</span
-            >
-            <span class="skill-item"><i class="fab fa-python"></i> Python</span>
-            <span class="skill-item"><i class="fab fa-django"></i> Django</span>
-            <span class="skill-item"
-              ><i class="fab fa-postgresql"></i> PostgreSQL</span
-            >
-            <span class="skill-item"
-              ><i class="fab fa-mongodb"></i> MongoDB</span
-            >
-            <span class="skill-item"><i class="fab fa-redis"></i> Redis</span>
-            <span class="skill-item"
-              ><i class="fab fa-graphql"></i> GraphQL</span
-            >
-            <span class="skill-item"
-              ><i class="fab fa-rest"></i> REST APIs</span
-            >
-            <span class="skill-item"><i class="fab fa-docker"></i> Docker</span>
+
+        <!-- Category 2: Cybersecurity & Networking (CORE FOCUS) -->
+        <div class="skill-category-group" data-category="security-networking">
+          <div class="category-header">
+            <div class="category-icon-box">
+              <i class="fas fa-shield-halved"></i>
+            </div>
+            <span class="category-title">Cybersecurity, Networking & Systems</span>
+            <div class="category-line"></div>
+            <span class="category-badge">Core Focus</span>
+          </div>
+          <div class="skills-cards-grid">
+            <div class="skill-card" style="--brand-color: #00f5ff;">
+              <i class="fas fa-network-wired"></i>
+              <span class="skill-card-name">TCP/IP & OSI</span>
+              <span class="skill-card-sub">Protocol Architecture</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #1BA0D7;">
+              <i class="fas fa-sitemap"></i>
+              <span class="skill-card-name">IP Subnetting</span>
+              <span class="skill-card-sub">IPv4, IPv6, NAT</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #00BFB3;">
+              <i class="fas fa-globe"></i>
+              <span class="skill-card-name">DNS / DHCP / HTTP</span>
+              <span class="skill-card-sub">Core Net Protocols</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #00B4D8;">
+              <i class="fas fa-route"></i>
+              <span class="skill-card-name">Routing & VLAN</span>
+              <span class="skill-card-sub">LAN/WAN & Switching</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #1679A7;">
+              <i class="fas fa-microchip"></i>
+              <span class="skill-card-name">Packet Tracer</span>
+              <span class="skill-card-sub">Cisco Router & Switch</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #FCC624;">
+              <i class="devicon-linux-plain"></i>
+              <span class="skill-card-name">Linux Admin</span>
+              <span class="skill-card-sub">System Management</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #4EAA25;">
+              <i class="devicon-bash-plain"></i>
+              <span class="skill-card-name">Bash Scripting</span>
+              <span class="skill-card-sub">Shell Automation</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #00FF66;">
+              <i class="fas fa-terminal"></i>
+              <span class="skill-card-name">Network CLI</span>
+              <span class="skill-card-sub">ping, SSH, curl, dig, netstat</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #1679A7;">
+              <i class="fas fa-magnifying-glass-chart"></i>
+              <span class="skill-card-name">Wireshark</span>
+              <span class="skill-card-sub">Packet Inspection</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #21759B;">
+              <i class="fas fa-radar"></i>
+              <span class="skill-card-name">Nmap</span>
+              <span class="skill-card-sub">Port & Service Scan</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #E53935;">
+              <i class="fas fa-bug"></i>
+              <span class="skill-card-name">Metasploit</span>
+              <span class="skill-card-sub">Penetration Testing</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #FF6600;">
+              <i class="fas fa-user-shield"></i>
+              <span class="skill-card-name">Burp Suite</span>
+              <span class="skill-card-sub">Web Security Auditing</span>
+            </div>
           </div>
         </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-cloud"></i> Cloud & DevOps</h3>
-          <div class="skill-items">
-            <span class="skill-item"><i class="fab fa-aws"></i> AWS</span>
-            <span class="skill-item"
-              ><i class="fab fa-cloud"></i> Google Cloud</span
-            >
-            <span class="skill-item"><i class="fab fa-vercel"></i> Vercel</span>
-            <span class="skill-item"
-              ><i class="fab fa-netlify"></i> Netlify</span
-            >
-            <span class="skill-item"><i class="fab fa-git"></i> Git</span>
+
+        <!-- Category 3: Programming Languages & Full-Stack Frameworks -->
+        <div class="skill-category-group" data-category="fullstack-languages">
+          <div class="category-header">
+            <div class="category-icon-box">
+              <i class="fas fa-code"></i>
+            </div>
+            <span class="category-title">Programming Languages, Frameworks & Architecture</span>
+            <div class="category-line"></div>
+          </div>
+          <div class="skills-cards-grid">
+            <div class="skill-card" style="--brand-color: #ED8B00;">
+              <i class="devicon-java-plain"></i>
+              <span class="skill-card-name">Java</span>
+              <span class="skill-card-sub">OOP & Enterprise</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #3776AB;">
+              <i class="devicon-python-plain"></i>
+              <span class="skill-card-name">Python</span>
+              <span class="skill-card-sub">Scripting & Backend</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #F7DF1E;">
+              <i class="devicon-javascript-plain"></i>
+              <span class="skill-card-name">JavaScript</span>
+              <span class="skill-card-sub">ES6+ Full-Stack</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #3178C6;">
+              <i class="devicon-typescript-plain"></i>
+              <span class="skill-card-name">TypeScript</span>
+              <span class="skill-card-sub">Type-Safe Apps</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #A8B9CC;">
+              <i class="devicon-c-plain"></i>
+              <span class="skill-card-name">C Language</span>
+              <span class="skill-card-sub">Low-Level System</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #003B57;">
+              <i class="fas fa-database"></i>
+              <span class="skill-card-name">SQL</span>
+              <span class="skill-card-sub">Relational Querying</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #61DAFB;">
+              <i class="devicon-react-original"></i>
+              <span class="skill-card-name">React & Native</span>
+              <span class="skill-card-sub">Web & Mobile Apps</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #ffffff;">
+              <i class="devicon-nextjs-plain"></i>
+              <span class="skill-card-name">Next.js</span>
+              <span class="skill-card-sub">SSR React Framework</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #ffffff;">
+              <i class="fas fa-mobile-screen-button"></i>
+              <span class="skill-card-name">Expo</span>
+              <span class="skill-card-sub">Mobile Ecosystem</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #6DB33F;">
+              <i class="devicon-spring-plain"></i>
+              <span class="skill-card-name">Spring Boot</span>
+              <span class="skill-card-sub">Enterprise Microservices</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #ffffff;">
+              <i class="devicon-express-original"></i>
+              <span class="skill-card-name">Express.js</span>
+              <span class="skill-card-sub">Node Backend APIs</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #512BD4;">
+              <i class="devicon-dotnetcore-plain"></i>
+              <span class="skill-card-name">ASP.NET Core</span>
+              <span class="skill-card-sub">C# Backend Services</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #009688;">
+              <i class="devicon-fastapi-plain"></i>
+              <span class="skill-card-name">FastAPI</span>
+              <span class="skill-card-sub">High-Perf Async APIs</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #092E20;">
+              <i class="devicon-django-plain"></i>
+              <span class="skill-card-name">Django & Flask</span>
+              <span class="skill-card-sub">Python Web Frameworks</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #FF2D20;">
+              <i class="devicon-laravel-plain"></i>
+              <span class="skill-card-name">Laravel</span>
+              <span class="skill-card-sub">PHP Web Framework</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #4169E1;">
+              <i class="devicon-postgresql-plain"></i>
+              <span class="skill-card-name">Databases</span>
+              <span class="skill-card-sub">MySQL, Postgres, Mongo, Firebase</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #00f5ff;">
+              <i class="fas fa-cubes-stacked"></i>
+              <span class="skill-card-name">Microservices</span>
+              <span class="skill-card-sub">REST APIs & RabbitMQ</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #4B0082;">
+              <i class="fas fa-key"></i>
+              <span class="skill-card-name">Auth Security</span>
+              <span class="skill-card-sub">JWT, OAuth2 & Keycloak</span>
+            </div>
           </div>
         </div>
-        <div class="skill-category">
-          <h3><i class="fas fa-palette"></i> Design & Tools</h3>
-          <div class="skill-items">
-            <span class="skill-item"><i class="fab fa-figma"></i> Figma</span>
-            <span class="skill-item"
-              ><i class="fab fa-adobe"></i> Adobe XD</span
-            >
-            <span class="skill-item"
-              ><i class="fab fa-photoshop"></i> Photoshop</span
-            >
-            <span class="skill-item"
-              ><i class="fab fa-design"></i> UI/UX Design</span
-            >
-            <span class="skill-item"
-              ><i class="fab fa-responsive"></i> Responsive Design</span
-            >
-            <span class="skill-item"
-              ><i class="fab fa-accessibility"></i> Accessibility</span
-            >
-            <span class="skill-item"
-              ><i class="fab fa-optimization"></i> Performance
-              Optimization</span
-            >
-            <span class="skill-item"><i class="fab fa-seo"></i> SEO</span>
+
+        <!-- Category 4: AI, Machine Learning & Data Analytics -->
+        <div class="skill-category-group" data-category="ai-data">
+          <div class="category-header">
+            <div class="category-icon-box">
+              <i class="fas fa-brain"></i>
+            </div>
+            <span class="category-title">Artificial Intelligence, ML & Data Analytics</span>
+            <div class="category-line"></div>
+          </div>
+          <div class="skills-cards-grid">
+            <div class="skill-card" style="--brand-color: #EE4C2C;">
+              <i class="devicon-pytorch-plain"></i>
+              <span class="skill-card-name">PyTorch</span>
+              <span class="skill-card-sub">Deep Learning</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #FF6F00;">
+              <i class="devicon-tensorflow-line"></i>
+              <span class="skill-card-name">TensorFlow</span>
+              <span class="skill-card-sub">Machine Learning</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #FFD21E;">
+              <i class="fas fa-robot"></i>
+              <span class="skill-card-name">Hugging Face</span>
+              <span class="skill-card-sub">Transformers & LLMs</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #5C3EE8;">
+              <i class="devicon-opencv-plain"></i>
+              <span class="skill-card-name">OpenCV</span>
+              <span class="skill-card-sub">Computer Vision</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #150458;">
+              <i class="devicon-pandas-plain"></i>
+              <span class="skill-card-name">NumPy & Pandas</span>
+              <span class="skill-card-sub">Data Manipulation</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #F7931E;">
+              <i class="devicon-scikitlearn-plain"></i>
+              <span class="skill-card-name">Scikit-Learn</span>
+              <span class="skill-card-sub">Predictive ML</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #3776AB;">
+              <i class="fas fa-chart-line"></i>
+              <span class="skill-card-name">Matplotlib & Seaborn</span>
+              <span class="skill-card-sub">Data Visualization</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #F2C811;">
+              <i class="fas fa-chart-pie"></i>
+              <span class="skill-card-name">Power BI & Looker</span>
+              <span class="skill-card-sub">Business Intelligence</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #1D6F42;">
+              <i class="fas fa-file-excel"></i>
+              <span class="skill-card-name">Excel Analytics</span>
+              <span class="skill-card-sub">Spreadsheets & Data</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: UI/UX Design, Tools & Methodologies -->
+        <div class="skill-category-group" data-category="design-tools">
+          <div class="category-header">
+            <div class="category-icon-box">
+              <i class="fas fa-pen-ruler"></i>
+            </div>
+            <span class="category-title">UI/UX Design, Tools & Methodologies</span>
+            <div class="category-line"></div>
+          </div>
+          <div class="skills-cards-grid">
+            <div class="skill-card" style="--brand-color: #F24E1E;">
+              <i class="devicon-figma-plain"></i>
+              <span class="skill-card-name">Figma</span>
+              <span class="skill-card-sub">UI/UX & Design Systems</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #0055FF;">
+              <i class="devicon-framer-original"></i>
+              <span class="skill-card-name">Framer & Lovable</span>
+              <span class="skill-card-sub">Interactive Web Design</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #00C4CC;">
+              <i class="fas fa-palette"></i>
+              <span class="skill-card-name">Canva</span>
+              <span class="skill-card-sub">Visual Assets & Layouts</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #FF61F6;">
+              <i class="fas fa-pen-ruler"></i>
+              <span class="skill-card-name">Wireframing</span>
+              <span class="skill-card-sub">Prototyping & User Flows</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #00B4D8;">
+              <i class="fas fa-users-viewfinder"></i>
+              <span class="skill-card-name">UX Research</span>
+              <span class="skill-card-sub">Google Forms & User Testing</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #F05032;">
+              <i class="devicon-git-plain"></i>
+              <span class="skill-card-name">Git & GitHub</span>
+              <span class="skill-card-sub">Version Control</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #FF6C37;">
+              <i class="devicon-postman-plain"></i>
+              <span class="skill-card-name">Postman</span>
+              <span class="skill-card-sub">API Testing & Docs</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #F9AB00;">
+              <i class="devicon-jupyter-plain"></i>
+              <span class="skill-card-name">Google Colab</span>
+              <span class="skill-card-sub">Cloud ML Notebooks</span>
+            </div>
+            <div class="skill-card" style="--brand-color: #00B4D8;">
+              <i class="fas fa-rotate"></i>
+              <span class="skill-card-name">Agile Methodology</span>
+              <span class="skill-card-sub">Scrum & Kanban</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1371,8 +1873,36 @@
     }, observerOptions);
 
     // Observe elements for animation
-    document.querySelectorAll(".skill-category, .project-card, .stat-item").forEach((el) => {
+    document.querySelectorAll(".skill-category-group, .project-card, .stat-item").forEach((el) => {
       observer.observe(el);
+    });
+
+    // Skill category filter interactivity
+    const filterBtns = document.querySelectorAll(".skill-filter-btn");
+    const skillGroups = document.querySelectorAll(".skill-category-group");
+
+    filterBtns.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        filterBtns.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const filter = btn.getAttribute("data-filter");
+
+        skillGroups.forEach((group) => {
+          if (filter === "all" || group.getAttribute("data-category") === filter) {
+            group.style.display = "block";
+            setTimeout(() => {
+              group.style.opacity = "1";
+              group.style.transform = "translateY(0)";
+            }, 30);
+          } else {
+            group.style.opacity = "0";
+            group.style.transform = "translateY(10px)";
+            setTimeout(() => {
+              group.style.display = "none";
+            }, 250);
+          }
+        });
+      });
     });
 
     // Dynamic typing effect for hero subtitle
