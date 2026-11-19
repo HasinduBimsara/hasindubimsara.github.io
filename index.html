@@ -1,119 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Hasindu Bimsara — software engineering undergraduate building full-stack applications, thoughtful interfaces, and AI-powered experiences."/>
-  <meta name="theme-color" content="#151312"/>
-  <meta property="og:title" content="Hasindu Bimsara | Software Engineer"/>
-  <meta property="og:description" content="Full-stack development, AI-powered experiences, and a little curiosity. Explore my projects and engineering journey."/>
-  <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://hasindubimsara.github.io/"/>
-  <meta property="og:image" content="https://hasindubimsara.github.io/Images/about-image.jpg"/>
-  <link rel="icon" type="image/png" href="Images/logo.png"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link rel="stylesheet" href="styles.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Hasindu Bimsara — software engineering undergraduate building full-stack applications, thoughtful interfaces, and AI-powered experiences." />
+  <meta name="theme-color" content="#151312" />
+  <meta property="og:title" content="Hasindu Bimsara | Software Engineer" />
+  <meta property="og:description"
+    content="Full-stack development, AI-powered experiences, and a little curiosity. Explore my projects and engineering journey." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hasindubimsara.github.io/" />
+  <meta property="og:image" content="https://hasindubimsara.github.io/Images/about-image.jpg" />
+  <link rel="icon" type="image/png" href="Images/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="styles.css" />
   <script src="script.js" defer></script>
   <title>Hasindu Bimsara | Software Engineer</title>
 </head>
+
 <body>
-<svg class="symbols" xmlns="http://www.w3.org/2000/svg"><symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z"/></symbol><symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7V5a1 1 0 0 1 1-1h5l2 3h9a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z"/></symbol><symbol id="i-briefcase" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="14" rx="2"/><path d="M8 7V4h8v3M3 12a22 22 0 0 0 18 0M12 12v3"/></symbol><symbol id="i-tools" viewBox="0 0 24 24"><path d="m14 6 4 4M3 21l8-8M16 3a6 6 0 0 0-7 8L3 17a3 3 0 0 0 4 4l6-6a6 6 0 0 0 8-7l-4 4-5-5Z"/></symbol><symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></symbol><symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 19 19 5M5 5h14v14"/></symbol><symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 3l-4 18"/></symbol><symbol id="i-layers" viewBox="0 0 24 24"><path d="m12 3 10 6-10 6L2 9Zm-10 12 10 6 10-6M2 12l10 6 10-6"/></symbol><symbol id="i-github" viewBox="0 0 24 24"><path d="M9 19c-5 2-5-3-7-3m14 6v-4a4 4 0 0 0-1-3c4 0 6-2 6-5a5 5 0 0 0-1-4 5 5 0 0 0 0-4s-2 0-4 2a14 14 0 0 0-8 0C6 2 4 2 4 2a5 5 0 0 0 0 4 5 5 0 0 0-1 4c0 3 2 5 6 5a4 4 0 0 0-1 3v4"/></symbol><symbol id="i-linkedin" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 10v7m4 0v-7m0 3c0-4 6-4 6 0v4M7 7h.01"/></symbol><symbol id="i-instagram" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol><symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol><symbol id="i-send" viewBox="0 0 24 24"><path d="m22 2-7 20-4-9-9-4ZM22 2 11 13"/></symbol><symbol id="i-react" viewBox="0 0 24 24"><circle cx="12" cy="12" r="1"/><ellipse cx="12" cy="12" rx="11" ry="4"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(120 12 12)"/></symbol></svg>
-<a class="skip-link" href="#main">Skip to content</a>
-<header class="site-header"><nav class="nav-dock" aria-label="Main navigation"><a href="#home" aria-label="Home" aria-current="location"><svg class="icon " aria-hidden="true"><use href="#i-home"></use></svg><span>Home</span></a><a href="#projects" aria-label="Projects"><svg class="icon " aria-hidden="true"><use href="#i-folder"></use></svg><span>Projects</span></a><a href="#experience" aria-label="Journey"><svg class="icon " aria-hidden="true"><use href="#i-briefcase"></use></svg><span>Journey</span></a><a href="#skills" aria-label="Tools"><svg class="icon " aria-hidden="true"><use href="#i-tools"></use></svg><span>Tools</span></a><a href="#contact" aria-label="Contact"><svg class="icon " aria-hidden="true"><use href="#i-mail"></use></svg><span>Contact</span></a></nav></header>
-<div class="page-shell">
-  <aside class="profile-card reveal" aria-label="About Hasindu">
-    <div class="portrait-wrap"><img class="portrait" src="Images/about-image.jpg" alt="Hasindu Bimsara in the Sri Lankan hill country" width="280" height="268" fetchpriority="high"/><span class="portrait-tag"><span class="status-dot"></span> OPEN TO INTERNSHIPS</span></div>
-    <svg class="profile-doodle" viewBox="0 0 80 90" aria-hidden="true"><path d="M75 8C-5 3 2 66 36 61S68 19 43 32 44 78 79 78"/></svg>
-    <h2>Hasindu Bimsara<span style="color:#fa693b">.</span></h2>
-    <p>A software engineering undergraduate turning ideas into useful digital experiences.</p>
-    <p class="location">Based in Sri Lanka</p>
-    <div class="socials" aria-label="Social links">
-      <a href="https://github.com/HasinduBimsara" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg class="icon " aria-hidden="true"><use href="#i-github"></use></svg></a>
-      <a href="https://www.linkedin.com/in/hasindubimsara/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><svg class="icon " aria-hidden="true"><use href="#i-linkedin"></use></svg></a>
-      <a href="https://www.instagram.com/bimxara_22._/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg class="icon " aria-hidden="true"><use href="#i-instagram"></use></svg></a>
-      <a href="mailto:bimsarapremarathna123@gmail.com" aria-label="Email Hasindu"><svg class="icon " aria-hidden="true"><use href="#i-mail"></use></svg></a>
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-home" viewBox="0 0 24 24">
+      <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1Z" />
+    </symbol>
+    <symbol id="i-folder" viewBox="0 0 24 24">
+      <path d="M3 7V5a1 1 0 0 1 1-1h5l2 3h9a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1Z" />
+    </symbol>
+    <symbol id="i-briefcase" viewBox="0 0 24 24">
+      <rect x="3" y="7" width="18" height="14" rx="2" />
+      <path d="M8 7V4h8v3M3 12a22 22 0 0 0 18 0M12 12v3" />
+    </symbol>
+    <symbol id="i-tools" viewBox="0 0 24 24">
+      <path d="m14 6 4 4M3 21l8-8M16 3a6 6 0 0 0-7 8L3 17a3 3 0 0 0 4 4l6-6a6 6 0 0 0 8-7l-4 4-5-5Z" />
+    </symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="m3 6 9 7 9-7" />
+    </symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24">
+      <path d="M5 19 19 5M5 5h14v14" />
+    </symbol>
+    <symbol id="i-download" viewBox="0 0 24 24">
+      <path d="M12 3v12m-5-5 5 5 5-5M4 16v5h16v-5" />
+    </symbol>
+    <symbol id="i-code" viewBox="0 0 24 24">
+      <path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 3l-4 18" />
+    </symbol>
+    <symbol id="i-layers" viewBox="0 0 24 24">
+      <path d="m12 3 10 6-10 6L2 9Zm-10 12 10 6 10-6M2 12l10 6 10-6" />
+    </symbol>
+    <symbol id="i-github" viewBox="0 0 24 24">
+      <path
+        d="M9 19c-5 2-5-3-7-3m14 6v-4a4 4 0 0 0-1-3c4 0 6-2 6-5a5 5 0 0 0-1-4 5 5 0 0 0 0-4s-2 0-4 2a14 14 0 0 0-8 0C6 2 4 2 4 2a5 5 0 0 0 0 4 5 5 0 0 0-1 4c0 3 2 5 6 5a4 4 0 0 0-1 3v4" />
+    </symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="2" />
+      <path d="M7 10v7m4 0v-7m0 3c0-4 6-4 6 0v4M7 7h.01" />
+    </symbol>
+    <symbol id="i-instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5" />
+      <circle cx="12" cy="12" r="4" />
+      <path d="M17.5 6.5h.01" />
+    </symbol>
+    <symbol id="i-close" viewBox="0 0 24 24">
+      <path d="m6 6 12 12M6 18 18 6" />
+    </symbol>
+    <symbol id="i-send" viewBox="0 0 24 24">
+      <path d="m22 2-7 20-4-9-9-4ZM22 2 11 13" />
+    </symbol>
+    <symbol id="i-react" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="1" />
+      <ellipse cx="12" cy="12" rx="11" ry="4" />
+      <ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(60 12 12)" />
+      <ellipse cx="12" cy="12" rx="11" ry="4" transform="rotate(120 12 12)" />
+    </symbol>
+  </svg>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="nav-dock" aria-label="Main navigation"><a href="#home" aria-label="Home" aria-current="location"><svg
+          class="icon " aria-hidden="true">
+          <use href="#i-home"></use>
+        </svg><span>Home</span></a><a href="#projects" aria-label="Projects"><svg class="icon " aria-hidden="true">
+          <use href="#i-folder"></use>
+        </svg><span>Projects</span></a><a href="#experience" aria-label="Journey"><svg class="icon " aria-hidden="true">
+          <use href="#i-briefcase"></use>
+        </svg><span>Journey</span></a><a href="#skills" aria-label="Tools"><svg class="icon " aria-hidden="true">
+          <use href="#i-tools"></use>
+        </svg><span>Tools</span></a><a href="#contact" aria-label="Contact"><svg class="icon " aria-hidden="true">
+          <use href="#i-mail"></use>
+        </svg><span>Contact</span></a></nav>
+  </header>
+  <div class="page-shell">
+    <aside class="profile-card reveal" aria-label="About Hasindu">
+      <div class="portrait-wrap"><img class="portrait" src="Images/about-image.jpg"
+          alt="Hasindu Bimsara in the Sri Lankan hill country" width="280" height="268" fetchpriority="high" /><span
+          class="portrait-tag"><span class="status-dot"></span> OPEN TO INTERNSHIPS</span></div>
+      <svg class="profile-doodle" viewBox="0 0 80 90" aria-hidden="true">
+        <path d="M75 8C-5 3 2 66 36 61S68 19 43 32 44 78 79 78" />
+      </svg>
+      <h2>Hasindu Bimsara<span style="color:#fa693b">.</span></h2>
+      <p>A software engineering undergraduate turning ideas into useful digital experiences.</p>
+      <p class="location">Based in Sri Lanka</p>
+      <div class="socials" aria-label="Social links">
+        <a href="https://github.com/HasinduBimsara" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg
+            class="icon " aria-hidden="true">
+            <use href="#i-github"></use>
+          </svg></a>
+        <a href="https://www.linkedin.com/in/hasindubimsara/" target="_blank" rel="noopener noreferrer"
+          aria-label="LinkedIn"><svg class="icon " aria-hidden="true">
+            <use href="#i-linkedin"></use>
+          </svg></a>
+        <a href="https://www.instagram.com/bimxara_22._/" target="_blank" rel="noopener noreferrer"
+          aria-label="Instagram"><svg class="icon " aria-hidden="true">
+            <use href="#i-instagram"></use>
+          </svg></a>
+        <a href="mailto:bimsarapremarathna123@gmail.com" aria-label="Email Hasindu"><svg class="icon "
+            aria-hidden="true">
+            <use href="#i-mail"></use>
+          </svg></a>
+      </div>
+      <a class="resume-link" href="https://drive.google.com/uc?export=download&amp;id=1vdANAd1qYYED46vdsptvZv6XiwpUfCDp"
+        target="_blank" rel="noopener noreferrer">Download CV <svg class="icon " aria-hidden="true">
+          <use href="https://drive.google.com/file/d/1VbE4VaefB3marfLA08Qeb-SdDipQ79Ya/view?usp=sharing"></use>
+        </svg></a>
+    </aside>
+    <main id="main">
+      <section id="home" class="reveal" aria-labelledby="hero-title">
+        <p class="eyebrow"><span class="status-dot"></span> Curious mind. Thoughtful code.</p>
+        <h1 id="hero-title">Software<span>Engineer</span></h1>
+        <p class="hero-copy">I build full-stack applications that connect good ideas with real-world impact. From
+          thoughtful interfaces to reliable APIs, I love making every piece work together.</p>
+        <div class="stats" aria-label="Highlights">
+          <div class="stat"><strong>6+</strong><span>Production &amp;<br />research projects</span></div>
+          <div class="stat"><strong>3.67</strong><span>Undergraduate<br />CGPA / 4.0</span></div>
+          <div class="stat"><strong>2+</strong><span>National hackathon<br />recognitions</span></div>
+        </div>
+        <div class="service-grid">
+          <a class="service-card orange" href="#projects"><svg class="icon service-symbol" aria-hidden="true">
+              <use href="#i-layers"></use>
+            </svg>
+            <h2>Full-stack apps,<br />real-world impact</h2><span class="circle-arrow"><svg class="icon "
+                aria-hidden="true">
+                <use href="#i-arrow"></use>
+              </svg></span>
+          </a>
+          <a class="service-card lime" href="#skills"><svg class="icon service-symbol" aria-hidden="true">
+              <use href="#i-code"></use>
+            </svg>
+            <h2>Spring Boot,<br />React &amp; beyond</h2><span class="circle-arrow"><svg class="icon "
+                aria-hidden="true">
+                <use href="#i-arrow"></use>
+              </svg></span>
+          </a>
+        </div>
+      </section>
+      <section id="projects" aria-labelledby="projects-title">
+        <div class="section-topline">
+          <p class="eyebrow">A little of what I build</p><span class="section-count" id="project-count"
+            aria-live="polite">07 PROJECTS</span>
+        </div>
+        <h2 id="projects-title" class="section-title">Selected<span>Projects</span></h2>
+        <div class="filters" aria-label="Filter projects"><button class="filter" data-filter="all"
+            aria-pressed="true">All work</button><button class="filter" data-filter="fullstack"
+            aria-pressed="false">Full-stack</button><button class="filter" data-filter="ai" aria-pressed="false">AI
+            &amp; ML</button><button class="filter" data-filter="mobile" aria-pressed="false">Mobile &amp; AR</button>
+        </div>
+        <div class="project-list"><button class="project-row" data-project="0" data-category="fullstack ai web"
+            aria-haspopup="dialog" aria-label="View OUTING project details">
+            <img src="Images/outing.jpg" alt="OUTING project preview" width="104" height="92" loading="lazy" />
+            <span><span class="project-name">OUTING</span><span class="project-description">AI trip planner & tour
+                guide</span><span class="project-meta">Ballerina · Gemini API</span></span><svg class="icon "
+              aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg></button><button class="project-row" data-project="1" data-category="fullstack ai web"
+            aria-haspopup="dialog" aria-label="View PrepNexus project details">
+            <img src="Images/prepnexus.jpg" alt="PrepNexus project preview" width="104" height="92" loading="lazy" />
+            <span><span class="project-name">PrepNexus</span><span class="project-description">AI & peer-to-peer
+                interview practice</span><span class="project-meta">Spring Boot · Next.js · Ongoing</span></span><svg
+              class="icon " aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg></button><button class="project-row" data-project="2" data-category="ai mobile" aria-haspopup="dialog"
+            aria-label="View MindCare.lk project details">
+            <img src="Images/mindcare.jpg" alt="MindCare.lk project preview" width="104" height="92" loading="lazy" />
+            <span><span class="project-name">MindCare.lk</span><span class="project-description">Mental health &
+                counseling platform</span><span class="project-meta">PyTorch · Flask · React Native</span></span><svg
+              class="icon " aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg></button><button class="project-row" data-project="3" data-category="fullstack web"
+            aria-haspopup="dialog" aria-label="View Githmi Sports project details">
+            <img src="Images/githmi.png" alt="Githmi Sports project preview" width="104" height="92" loading="lazy" />
+            <span><span class="project-name">Githmi Sports</span><span class="project-description">Full-stack sports
+                e-commerce</span><span class="project-meta">React · Node.js · MongoDB</span></span><svg class="icon "
+              aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg></button><button class="project-row" data-project="4" data-category="mobile" aria-haspopup="dialog"
+            aria-label="View ECOS OF REALITY project details">
+            <img src="Images/ecos-reality.jpg" alt="ECOS OF REALITY project preview" width="104" height="92"
+              loading="lazy" />
+            <span><span class="project-name">ECOS OF REALITY</span><span class="project-description">An augmented
+                reality learning concept</span><span class="project-meta">Figma · AR · UI/UX</span></span><svg
+              class="icon " aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg></button><button class="project-row" data-project="5" data-category="fullstack web"
+            aria-haspopup="dialog" aria-label="View StrideSync project details">
+            <img src="Images/stridesync.jpg" alt="StrideSync project preview" width="104" height="92" loading="lazy" />
+            <span><span class="project-name">StrideSync</span><span class="project-description">Personalized athletic
+                training plans</span><span class="project-meta">Spring Boot · React · Ongoing</span></span><svg
+              class="icon " aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg></button><button class="project-row" data-project="6" data-category="fullstack mobile"
+            aria-haspopup="dialog" aria-label="View FixMyRide project details">
+            <img src="Images/fixmyride.png" alt="FixMyRide project preview" width="104" height="92" loading="lazy" />
+            <span><span class="project-name">FixMyRide</span><span class="project-description">Real-time roadside
+                assistance</span><span class="project-meta">Spring Boot · PostGIS · Ongoing</span></span><svg
+              class="icon " aria-hidden="true">
+              <use href="#i-arrow"></use>
+            </svg></button></div>
+        <a class="text-link" href="https://github.com/HasinduBimsara" target="_blank" rel="noopener noreferrer">More on
+          GitHub <svg class="icon " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg></a>
+      </section>
+      <section id="experience" aria-labelledby="experience-title">
+        <p class="eyebrow">Learning. Building. Growing.</p>
+        <h2 id="experience-title" class="section-title">My engineering<span>Journey</span></h2>
+        <article class="journey-item">
+          <div class="journey-head">
+            <div>
+              <h3>Computing &amp; Information Systems</h3>
+              <p class="institution">Sabaragamuwa University of Sri Lanka</p>
+            </div><span class="journey-number">01</span>
+          </div>
+          <p>B.Sc. (Hons) undergraduate exploring software engineering, distributed systems, database management, and
+            object-oriented design. Active in the IEEE Student Branch and Computing Society.</p><time>2024 — 2028</time>
+        </article>
+        <article class="journey-item">
+          <div class="journey-head">
+            <div>
+              <h3>Full-stack &amp; cloud architecture</h3>
+              <p class="institution">Academic &amp; independent projects</p>
+            </div><span class="journey-number">02</span>
+          </div>
+          <p>Building distributed applications including FixMyRide, StrideSync, and PrepNexus. Working with real-time
+            communication, spatial data, and modern Spring Boot and React ecosystems.</p><time>2025 — Present</time>
+        </article>
+        <article class="journey-item">
+          <div class="journey-head">
+            <div>
+              <h3>Ideas beyond the classroom</h3>
+              <p class="institution">Competitive programming &amp; innovation</p>
+            </div><span class="journey-number">03</span>
+          </div>
+          <p>IEEE Innovation Nation Sri Lanka 2026 quarter-finalist with FixMyRide, and J’PuraXtreme 3.0 finalist.
+            Learning to solve challenging problems through teamwork and experimentation.</p><time>2024 — 2026</time>
+        </article>
+      </section>
+      <section id="skills" aria-labelledby="skills-title">
+        <p class="eyebrow">The everyday toolkit</p>
+        <h2 id="skills-title" class="section-title">Tools &amp;<span>Technologies</span></h2>
+        <div class="tool-grid">
+          <div class="tool"><span class="tool-logo spring" aria-hidden="true">S</span>
+            <div>
+              <h3>Spring Boot</h3>
+              <p>Backend engineering</p>
+            </div>
+          </div>
+          <div class="tool"><span class="tool-logo react" aria-hidden="true"><svg class="icon " aria-hidden="true">
+                <use href="#i-react"></use>
+              </svg></span>
+            <div>
+              <h3>React</h3>
+              <p>Interactive interfaces</p>
+            </div>
+          </div>
+          <div class="tool"><span class="tool-logo " aria-hidden="true">N</span>
+            <div>
+              <h3>Next.js</h3>
+              <p>Full-stack web apps</p>
+            </div>
+          </div>
+          <div class="tool"><span class="tool-logo python" aria-hidden="true">Py</span>
+            <div>
+              <h3>Python</h3>
+              <p>AI & machine learning</p>
+            </div>
+          </div>
+          <div class="tool"><span class="tool-logo docker" aria-hidden="true"><svg class="icon " aria-hidden="true">
+                <use href="#i-layers"></use>
+              </svg></span>
+            <div>
+              <h3>Docker</h3>
+              <p>Containerized systems</p>
+            </div>
+          </div>
+          <div class="tool"><span class="tool-logo figma" aria-hidden="true">F</span>
+            <div>
+              <h3>Figma</h3>
+              <p>Interface & UX design</p>
+            </div>
+          </div>
+        </div>
+        <details class="stack-details">
+          <summary>Explore my full technical stack</summary>
+          <div class="stack-tags">
+            <span>Java</span><span>JavaScript</span><span>TypeScript</span><span>Python</span><span>C</span><span>C++</span><span>HTML5</span><span>CSS3</span><span>Bash</span><span>React</span><span>Next.js</span><span>Tailwind
+              CSS</span><span>Node.js</span><span>Express</span><span>Flask</span><span>Spring
+              Boot</span><span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span><span>OpenCV</span><span>NumPy</span><span>Ballerina</span><span>Pandas</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Firebase</span><span>Redis</span><span>Docker</span><span>AWS</span><span>Git</span><span>GitHub</span><span>Linux</span><span>Wireshark</span><span>Nmap</span><span>Vercel</span><span>Jupyter</span><span>Figma</span><span>Postman</span><span>Canva</span><span>Hugging
+              Face</span><span>Burp Suite</span>
+          </div>
+        </details>
+      </section>
+      <section id="about" aria-labelledby="about-title">
+        <p class="eyebrow">The person behind the code</p>
+        <h2 id="about-title" class="section-title">Always<span>Curious</span></h2>
+        <div class="about-copy">
+          <p>I’m Hasindu, a Computing and Information Systems undergraduate based in Sri Lanka. I enjoy understanding
+            how things work, then finding ways to make them better.</p>
+          <p>My work brings together <strong>Spring Boot, Node.js, and React</strong>, with hands-on experience in REST
+            APIs, microservices, Docker, and AI-powered applications. I care about clean, maintainable code and
+            experiences that feel simple to use.</p>
+          <p>I’m looking for a <strong>Software Engineer or Full-Stack Developer internship</strong> where I can
+            contribute, learn from a team, and work on meaningful engineering challenges.</p>
+        </div>
+        <a class="text-link" href="#contact">Let’s build something together <svg class="icon " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg></a>
+      </section>
+      <section id="certifications" aria-labelledby="certifications-title">
+        <p class="eyebrow">Milestones along the way</p>
+        <h2 id="certifications-title" class="section-title">Learning &amp;<span>Recognition</span></h2>
+        <a class="recognition" href="Images/certificate-1.png" target="_blank" rel="noopener"><span>01</span>
+          <div>
+            <h3>Cisco Networking & Cybersecurity</h3>
+            <p>Cisco Networking Academy · Networking & security</p>
+          </div><svg class="icon " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a><a class="recognition" href="Images/certificate-2.png" target="_blank" rel="noopener"><span>02</span>
+          <div>
+            <h3>Introduction to Linux (LFS101)</h3>
+            <p>The Linux Foundation · Linux & system workflows</p>
+          </div><svg class="icon " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a><a class="recognition" href="Images/certificate-3.png" target="_blank" rel="noopener"><span>03</span>
+          <div>
+            <h3>Server-side Web Programming</h3>
+            <p>University of Moratuwa · Backend development</p>
+          </div><svg class="icon " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a><a class="recognition" href="Images/certificate-4.png" target="_blank" rel="noopener"><span>04</span>
+          <div>
+            <h3>Hackathon & Competitive Honors</h3>
+            <p>IEEE INSL 2026 · J’PuraXtreme 3.0 · MoraXtreme 9.0</p>
+          </div><svg class="icon " aria-hidden="true">
+            <use href="#i-arrow"></use>
+          </svg>
+        </a>
+      </section>
+      <section id="contact" aria-labelledby="contact-title">
+        <p class="eyebrow"><span class="status-dot"></span> Open to a good conversation</p>
+        <h2 id="contact-title" class="section-title">Let’s work<span>Together</span></h2>
+        <p class="section-intro">Have an opportunity, a project idea, or just want to say hello? I’d love to hear from
+          you.</p>
+        <form id="contact-form" class="contact-form">
+          <div class="form-row"><label>Name<input name="name" autocomplete="name" placeholder="Your name"
+                maxlength="120" required /></label><label>Email<input name="email" type="email" autocomplete="email"
+                placeholder="you@example.com" maxlength="254" required /></label></div>
+          <label>Subject<input name="subject" placeholder="What would you like to talk about?" maxlength="180"
+              required /></label>
+          <label>Message<textarea name="message" placeholder="Tell me a little about your idea…" maxlength="4000"
+              required></textarea></label>
+          <button class="send-button" type="submit">Let’s talk <svg class="icon " aria-hidden="true">
+              <use href="#i-send"></use>
+            </svg></button>
+          <p class="form-note">Opens a draft in your email app. You can review it before sending.</p>
+        </form>
+        <div class="contact-bottom"><a
+            href="mailto:bimsarapremarathna123@gmail.com">bimsarapremarathna123@gmail.com</a><button id="copy-email"
+            class="copy-email" type="button">Copy email</button></div>
+      </section>
+      <footer class="footer"><span>© <span id="year">2026</span> Hasindu Bimsara</span><a href="#home">Back to top ↑</a>
+      </footer>
+    </main>
+  </div>
+  <dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
+    <button type="button" class="modal-close" aria-label="Close project details"><svg class="icon " aria-hidden="true">
+        <use href="#i-close"></use>
+      </svg></button>
+    <img id="modal-image" class="modal-image" alt="" />
+    <div class="modal-content">
+      <h2 id="modal-title"></h2>
+      <p id="modal-description"></p>
+      <div id="modal-tech" class="modal-tech"></div><a id="modal-link" class="send-button" target="_blank"
+        rel="noopener noreferrer"><span id="modal-link-label">View source code</span><svg class="icon "
+          aria-hidden="true">
+          <use href="#i-arrow"></use>
+        </svg></a>
     </div>
-    <a class="resume-link" href="https://drive.google.com/uc?export=download&amp;id=1vdANAd1qYYED46vdsptvZv6XiwpUfCDp" target="_blank" rel="noopener noreferrer">Download résumé <svg class="icon " aria-hidden="true"><use href="#i-download"></use></svg></a>
-  </aside>
-  <main id="main">
-    <section id="home" class="reveal" aria-labelledby="hero-title">
-      <p class="eyebrow"><span class="status-dot"></span> Curious mind. Thoughtful code.</p>
-      <h1 id="hero-title">Software<span>Engineer</span></h1>
-      <p class="hero-copy">I build full-stack applications that connect good ideas with real-world impact. From thoughtful interfaces to reliable APIs, I love making every piece work together.</p>
-      <div class="stats" aria-label="Highlights">
-        <div class="stat"><strong>6+</strong><span>Production &amp;<br/>research projects</span></div>
-        <div class="stat"><strong>3.67</strong><span>Undergraduate<br/>CGPA / 4.0</span></div>
-        <div class="stat"><strong>2+</strong><span>National hackathon<br/>recognitions</span></div>
-      </div>
-      <div class="service-grid">
-        <a class="service-card orange" href="#projects"><svg class="icon service-symbol" aria-hidden="true"><use href="#i-layers"></use></svg><h2>Full-stack apps,<br/>real-world impact</h2><span class="circle-arrow"><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></span></a>
-        <a class="service-card lime" href="#skills"><svg class="icon service-symbol" aria-hidden="true"><use href="#i-code"></use></svg><h2>Spring Boot,<br/>React &amp; beyond</h2><span class="circle-arrow"><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></span></a>
-      </div>
-    </section>
-    <section id="projects" aria-labelledby="projects-title">
-      <div class="section-topline"><p class="eyebrow">A little of what I build</p><span class="section-count" id="project-count" aria-live="polite">07 PROJECTS</span></div>
-      <h2 id="projects-title" class="section-title">Selected<span>Projects</span></h2>
-      <div class="filters" aria-label="Filter projects"><button class="filter" data-filter="all" aria-pressed="true">All work</button><button class="filter" data-filter="fullstack" aria-pressed="false">Full-stack</button><button class="filter" data-filter="ai" aria-pressed="false">AI &amp; ML</button><button class="filter" data-filter="mobile" aria-pressed="false">Mobile &amp; AR</button></div>
-      <div class="project-list"><button class="project-row" data-project="0" data-category="fullstack ai web" aria-haspopup="dialog" aria-label="View OUTING project details">
-<img src="Images/outing.jpg" alt="OUTING project preview" width="104" height="92" loading="lazy"/>
-<span><span class="project-name">OUTING</span><span class="project-description">AI trip planner & tour guide</span><span class="project-meta">Ballerina · Gemini API</span></span><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></button><button class="project-row" data-project="1" data-category="fullstack ai web" aria-haspopup="dialog" aria-label="View PrepNexus project details">
-<img src="Images/prepnexus.jpg" alt="PrepNexus project preview" width="104" height="92" loading="lazy"/>
-<span><span class="project-name">PrepNexus</span><span class="project-description">AI & peer-to-peer interview practice</span><span class="project-meta">Spring Boot · Next.js · Ongoing</span></span><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></button><button class="project-row" data-project="2" data-category="ai mobile" aria-haspopup="dialog" aria-label="View MindCare.lk project details">
-<img src="Images/mindcare.jpg" alt="MindCare.lk project preview" width="104" height="92" loading="lazy"/>
-<span><span class="project-name">MindCare.lk</span><span class="project-description">Mental health & counseling platform</span><span class="project-meta">PyTorch · Flask · React Native</span></span><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></button><button class="project-row" data-project="3" data-category="fullstack web" aria-haspopup="dialog" aria-label="View Githmi Sports project details">
-<img src="Images/githmi.png" alt="Githmi Sports project preview" width="104" height="92" loading="lazy"/>
-<span><span class="project-name">Githmi Sports</span><span class="project-description">Full-stack sports e-commerce</span><span class="project-meta">React · Node.js · MongoDB</span></span><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></button><button class="project-row" data-project="4" data-category="mobile" aria-haspopup="dialog" aria-label="View ECOS OF REALITY project details">
-<img src="Images/ecos-reality.jpg" alt="ECOS OF REALITY project preview" width="104" height="92" loading="lazy"/>
-<span><span class="project-name">ECOS OF REALITY</span><span class="project-description">An augmented reality learning concept</span><span class="project-meta">Figma · AR · UI/UX</span></span><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></button><button class="project-row" data-project="5" data-category="fullstack web" aria-haspopup="dialog" aria-label="View StrideSync project details">
-<img src="Images/stridesync.jpg" alt="StrideSync project preview" width="104" height="92" loading="lazy"/>
-<span><span class="project-name">StrideSync</span><span class="project-description">Personalized athletic training plans</span><span class="project-meta">Spring Boot · React · Ongoing</span></span><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></button><button class="project-row" data-project="6" data-category="fullstack mobile" aria-haspopup="dialog" aria-label="View FixMyRide project details">
-<img src="Images/fixmyride.png" alt="FixMyRide project preview" width="104" height="92" loading="lazy"/>
-<span><span class="project-name">FixMyRide</span><span class="project-description">Real-time roadside assistance</span><span class="project-meta">Spring Boot · PostGIS · Ongoing</span></span><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></button></div>
-      <a class="text-link" href="https://github.com/HasinduBimsara" target="_blank" rel="noopener noreferrer">More on GitHub <svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-    </section>
-    <section id="experience" aria-labelledby="experience-title">
-      <p class="eyebrow">Learning. Building. Growing.</p>
-      <h2 id="experience-title" class="section-title">My engineering<span>Journey</span></h2>
-      <article class="journey-item"><div class="journey-head"><div><h3>Computing &amp; Information Systems</h3><p class="institution">Sabaragamuwa University of Sri Lanka</p></div><span class="journey-number">01</span></div><p>B.Sc. (Hons) undergraduate exploring software engineering, distributed systems, database management, and object-oriented design. Active in the IEEE Student Branch and Computing Society.</p><time>2024 — 2028</time></article>
-      <article class="journey-item"><div class="journey-head"><div><h3>Full-stack &amp; cloud architecture</h3><p class="institution">Academic &amp; independent projects</p></div><span class="journey-number">02</span></div><p>Building distributed applications including FixMyRide, StrideSync, and PrepNexus. Working with real-time communication, spatial data, and modern Spring Boot and React ecosystems.</p><time>2025 — Present</time></article>
-      <article class="journey-item"><div class="journey-head"><div><h3>Ideas beyond the classroom</h3><p class="institution">Competitive programming &amp; innovation</p></div><span class="journey-number">03</span></div><p>IEEE Innovation Nation Sri Lanka 2026 quarter-finalist with FixMyRide, and J’PuraXtreme 3.0 finalist. Learning to solve challenging problems through teamwork and experimentation.</p><time>2024 — 2026</time></article>
-    </section>
-    <section id="skills" aria-labelledby="skills-title">
-      <p class="eyebrow">The everyday toolkit</p><h2 id="skills-title" class="section-title">Tools &amp;<span>Technologies</span></h2>
-      <div class="tool-grid"><div class="tool"><span class="tool-logo spring" aria-hidden="true">S</span><div><h3>Spring Boot</h3><p>Backend engineering</p></div></div><div class="tool"><span class="tool-logo react" aria-hidden="true"><svg class="icon " aria-hidden="true"><use href="#i-react"></use></svg></span><div><h3>React</h3><p>Interactive interfaces</p></div></div><div class="tool"><span class="tool-logo " aria-hidden="true">N</span><div><h3>Next.js</h3><p>Full-stack web apps</p></div></div><div class="tool"><span class="tool-logo python" aria-hidden="true">Py</span><div><h3>Python</h3><p>AI & machine learning</p></div></div><div class="tool"><span class="tool-logo docker" aria-hidden="true"><svg class="icon " aria-hidden="true"><use href="#i-layers"></use></svg></span><div><h3>Docker</h3><p>Containerized systems</p></div></div><div class="tool"><span class="tool-logo figma" aria-hidden="true">F</span><div><h3>Figma</h3><p>Interface & UX design</p></div></div></div>
-      <details class="stack-details"><summary>Explore my full technical stack</summary><div class="stack-tags"><span>Java</span><span>JavaScript</span><span>TypeScript</span><span>Python</span><span>C</span><span>C++</span><span>HTML5</span><span>CSS3</span><span>Bash</span><span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>Node.js</span><span>Express</span><span>Flask</span><span>Spring Boot</span><span>TensorFlow</span><span>PyTorch</span><span>Scikit-learn</span><span>OpenCV</span><span>NumPy</span><span>Ballerina</span><span>Pandas</span><span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Firebase</span><span>Redis</span><span>Docker</span><span>AWS</span><span>Git</span><span>GitHub</span><span>Linux</span><span>Wireshark</span><span>Nmap</span><span>Vercel</span><span>Jupyter</span><span>Figma</span><span>Postman</span><span>Canva</span><span>Hugging Face</span><span>Burp Suite</span></div></details>
-    </section>
-    <section id="about" aria-labelledby="about-title">
-      <p class="eyebrow">The person behind the code</p><h2 id="about-title" class="section-title">Always<span>Curious</span></h2>
-      <div class="about-copy"><p>I’m Hasindu, a Computing and Information Systems undergraduate based in Sri Lanka. I enjoy understanding how things work, then finding ways to make them better.</p><p>My work brings together <strong>Spring Boot, Node.js, and React</strong>, with hands-on experience in REST APIs, microservices, Docker, and AI-powered applications. I care about clean, maintainable code and experiences that feel simple to use.</p><p>I’m looking for a <strong>Software Engineer or Full-Stack Developer internship</strong> where I can contribute, learn from a team, and work on meaningful engineering challenges.</p></div>
-      <a class="text-link" href="#contact">Let’s build something together <svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-    </section>
-    <section id="certifications" aria-labelledby="certifications-title">
-      <p class="eyebrow">Milestones along the way</p><h2 id="certifications-title" class="section-title">Learning &amp;<span>Recognition</span></h2>
-      <a class="recognition" href="Images/certificate-1.png" target="_blank" rel="noopener"><span>01</span><div><h3>Cisco Networking & Cybersecurity</h3><p>Cisco Networking Academy · Networking & security</p></div><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></a><a class="recognition" href="Images/certificate-2.png" target="_blank" rel="noopener"><span>02</span><div><h3>Introduction to Linux (LFS101)</h3><p>The Linux Foundation · Linux & system workflows</p></div><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></a><a class="recognition" href="Images/certificate-3.png" target="_blank" rel="noopener"><span>03</span><div><h3>Server-side Web Programming</h3><p>University of Moratuwa · Backend development</p></div><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></a><a class="recognition" href="Images/certificate-4.png" target="_blank" rel="noopener"><span>04</span><div><h3>Hackathon & Competitive Honors</h3><p>IEEE INSL 2026 · J’PuraXtreme 3.0 · MoraXtreme 9.0</p></div><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></a>
-    </section>
-    <section id="contact" aria-labelledby="contact-title">
-      <p class="eyebrow"><span class="status-dot"></span> Open to a good conversation</p><h2 id="contact-title" class="section-title">Let’s work<span>Together</span></h2>
-      <p class="section-intro">Have an opportunity, a project idea, or just want to say hello? I’d love to hear from you.</p>
-      <form id="contact-form" class="contact-form">
-        <div class="form-row"><label>Name<input name="name" autocomplete="name" placeholder="Your name" maxlength="120" required/></label><label>Email<input name="email" type="email" autocomplete="email" placeholder="you@example.com" maxlength="254" required/></label></div>
-        <label>Subject<input name="subject" placeholder="What would you like to talk about?" maxlength="180" required/></label>
-        <label>Message<textarea name="message" placeholder="Tell me a little about your idea…" maxlength="4000" required></textarea></label>
-        <button class="send-button" type="submit">Let’s talk <svg class="icon " aria-hidden="true"><use href="#i-send"></use></svg></button>
-        <p class="form-note">Opens a draft in your email app. You can review it before sending.</p>
-      </form>
-      <div class="contact-bottom"><a href="mailto:bimsarapremarathna123@gmail.com">bimsarapremarathna123@gmail.com</a><button id="copy-email" class="copy-email" type="button">Copy email</button></div>
-    </section>
-    <footer class="footer"><span>© <span id="year">2026</span> Hasindu Bimsara</span><a href="#home">Back to top ↑</a></footer>
-  </main>
-</div>
-<dialog id="project-modal" class="project-modal" aria-labelledby="modal-title">
-  <button type="button" class="modal-close" aria-label="Close project details"><svg class="icon " aria-hidden="true"><use href="#i-close"></use></svg></button>
-  <img id="modal-image" class="modal-image" alt=""/>
-  <div class="modal-content"><h2 id="modal-title"></h2><p id="modal-description"></p><div id="modal-tech" class="modal-tech"></div><a id="modal-link" class="send-button" target="_blank" rel="noopener noreferrer"><span id="modal-link-label">View source code</span><svg class="icon " aria-hidden="true"><use href="#i-arrow"></use></svg></a></div>
-</dialog>
-<div id="toast" class="toast" role="status" aria-live="polite"></div>
-<script type="application/json" id="project-data">[{"title": "OUTING - Trip Planner (2024)", "desc": "A dynamic web application designed to simplify destination discovery and enhance travel planning. Key features include Location Discovery based on preferences, Side-by-side Destination Comparison, and Travel Time Estimation. Engineered high-performance backend with Ballerina, automated tour guide generation via Google Gemini API, and real-time mapping using Google Maps API.", "img": "Images/outing.jpg", "link": "https://github.com/thishakyawmh/iwb032-binarybrains", "tech": "Ballerina Backend, Google Gemini API, Google Maps API, HTML5, CSS3, JavaScript ES6"}, {"title": "PrepNexus – AI P2P Interview Preparation Platform (ONGOING)", "desc": "Full-stack platform for AI-driven mock interviews and real-time peer practice using Spring Boot, Next.js, and WebRTC. Building an interactive interview prep system featuring automated CV analysis and voice assessments via Gemini and Whisper APIs, interviewer-mindset decoder modules, and WebRTC-powered peer rooms with synchronized question boards.", "img": "Images/prepnexus.jpg", "link": "https://github.com/HasinduBimsara", "tech": "Spring Boot, Next.js, WebRTC, Gemini API, OpenAI Whisper, WebSockets, Java"}, {"title": "MindCare.lk – Mental Health & Counseling Platform (2026)", "desc": "Digital teletherapy mobile application facilitating professional counselor access, scheduling, and real-time video consultations. Contributed to UI/UX design and full-stack development, taking primary responsibility for engineering an AI-powered chatbot using Small Language Model (SLM), PyTorch, and Python Flask backend to provide preliminary mental health support and sentiment analysis.", "img": "Images/mindcare.jpg", "link": "https://github.com/HasinduBimsara", "tech": "PyTorch, Python Flask, SLM AI, Sentiment Analysis, React Native, UI/UX Design"}, {"title": "Githmi Sports Goods - Full Stack MERN E-Commerce Platform (2025)", "desc": "Engineered a responsive web app using React, Tailwind CSS, Framer Motion, Node.js, Express, and MongoDB; implemented Firebase/JWT authentication, variant-based inventory tracking, Recharts analytics, automated PDF reporting, Cloudinary media storage, and backend security middleware.", "img": "Images/githmi.png", "link": "https://github.com/HasinduBimsara", "tech": "React.js, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, JWT, Recharts, Cloudinary"}, {"title": "ECOS OF REALITY – AR Learning Experience (2025)", "desc": "Futuristic AR-based learning application concept designed to bridge traditional books and immersive 3D understanding. Spearheaded UI/UX design using Figma, focusing on user-centered accessibility, modern interaction patterns, and a cohesive neon-inspired visual system; conceptualized modular interface components for AR Scan, Interactive 3D Models, AI Tutor, Virtual Library, and Hologram Notes.", "img": "Images/ecos-reality.jpg", "link": "https://github.com/HasinduBimsara", "tech": "Figma, UI/UX Design, AR Concepts, 3D Modeling, Prototyping, Accessibility"}, {"title": "StrideSync – Personalized Running Athletic Training Platform (ONGOING)", "desc": "Full-stack training plan generator and progress tracker using Spring Boot, React, H2 Database, and RESTful APIs. Engineered an intelligent planner that generates customized, phase-based workout schedules based on user metrics and event dates. Implemented dynamic onboarding, interactive daily logs with video integration, and progress tracking utilizing React state management and Spring Data JPA/Hibernate.", "img": "Images/stridesync.jpg", "link": "https://github.com/HasinduBimsara", "tech": "Java Spring Boot, React, RESTful APIs, Spring Data JPA, Hibernate, H2 Database"}, {"title": "FixMyRide – On-Demand Roadside Assistance Platform (ONGOING)", "desc": "Location-based cross-platform mobile application and web ecosystem connecting stranded motorists with local repair garages. Built a real-time marketplace featuring spatial matching via PostGIS and OSRM, alongside bidirectional live GPS tracking using Java Spring Boot and WebSockets. Implemented automated distance-based fee calculations and a prepaid wallet system for mechanics to ensure secure, transparent, and immediate emergency vehicle recovery.", "img": "Images/fixmyride.png", "link": "https://github.com/HasinduBimsara", "tech": "Java Spring Boot, WebSockets, PostGIS, OSRM Spatial Engine, Live GPS, React Native, Mobile Ecosystem"}]</script>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script type="application/json"
+    id="project-data">[{"title": "OUTING - Trip Planner (2024)", "desc": "A dynamic web application designed to simplify destination discovery and enhance travel planning. Key features include Location Discovery based on preferences, Side-by-side Destination Comparison, and Travel Time Estimation. Engineered high-performance backend with Ballerina, automated tour guide generation via Google Gemini API, and real-time mapping using Google Maps API.", "img": "Images/outing.jpg", "link": "https://github.com/thishakyawmh/iwb032-binarybrains", "tech": "Ballerina Backend, Google Gemini API, Google Maps API, HTML5, CSS3, JavaScript ES6"}, {"title": "PrepNexus – AI P2P Interview Preparation Platform (ONGOING)", "desc": "Full-stack platform for AI-driven mock interviews and real-time peer practice using Spring Boot, Next.js, and WebRTC. Building an interactive interview prep system featuring automated CV analysis and voice assessments via Gemini and Whisper APIs, interviewer-mindset decoder modules, and WebRTC-powered peer rooms with synchronized question boards.", "img": "Images/prepnexus.jpg", "link": "https://github.com/HasinduBimsara", "tech": "Spring Boot, Next.js, WebRTC, Gemini API, OpenAI Whisper, WebSockets, Java"}, {"title": "MindCare.lk – Mental Health & Counseling Platform (2026)", "desc": "Digital teletherapy mobile application facilitating professional counselor access, scheduling, and real-time video consultations. Contributed to UI/UX design and full-stack development, taking primary responsibility for engineering an AI-powered chatbot using Small Language Model (SLM), PyTorch, and Python Flask backend to provide preliminary mental health support and sentiment analysis.", "img": "Images/mindcare.jpg", "link": "https://github.com/HasinduBimsara", "tech": "PyTorch, Python Flask, SLM AI, Sentiment Analysis, React Native, UI/UX Design"}, {"title": "Githmi Sports Goods - Full Stack MERN E-Commerce Platform (2025)", "desc": "Engineered a responsive web app using React, Tailwind CSS, Framer Motion, Node.js, Express, and MongoDB; implemented Firebase/JWT authentication, variant-based inventory tracking, Recharts analytics, automated PDF reporting, Cloudinary media storage, and backend security middleware.", "img": "Images/githmi.png", "link": "https://github.com/HasinduBimsara", "tech": "React.js, Tailwind CSS, Framer Motion, Node.js, Express.js, MongoDB, JWT, Recharts, Cloudinary"}, {"title": "ECOS OF REALITY – AR Learning Experience (2025)", "desc": "Futuristic AR-based learning application concept designed to bridge traditional books and immersive 3D understanding. Spearheaded UI/UX design using Figma, focusing on user-centered accessibility, modern interaction patterns, and a cohesive neon-inspired visual system; conceptualized modular interface components for AR Scan, Interactive 3D Models, AI Tutor, Virtual Library, and Hologram Notes.", "img": "Images/ecos-reality.jpg", "link": "https://github.com/HasinduBimsara", "tech": "Figma, UI/UX Design, AR Concepts, 3D Modeling, Prototyping, Accessibility"}, {"title": "StrideSync – Personalized Running Athletic Training Platform (ONGOING)", "desc": "Full-stack training plan generator and progress tracker using Spring Boot, React, H2 Database, and RESTful APIs. Engineered an intelligent planner that generates customized, phase-based workout schedules based on user metrics and event dates. Implemented dynamic onboarding, interactive daily logs with video integration, and progress tracking utilizing React state management and Spring Data JPA/Hibernate.", "img": "Images/stridesync.jpg", "link": "https://github.com/HasinduBimsara", "tech": "Java Spring Boot, React, RESTful APIs, Spring Data JPA, Hibernate, H2 Database"}, {"title": "FixMyRide – On-Demand Roadside Assistance Platform (ONGOING)", "desc": "Location-based cross-platform mobile application and web ecosystem connecting stranded motorists with local repair garages. Built a real-time marketplace featuring spatial matching via PostGIS and OSRM, alongside bidirectional live GPS tracking using Java Spring Boot and WebSockets. Implemented automated distance-based fee calculations and a prepaid wallet system for mechanics to ensure secure, transparent, and immediate emergency vehicle recovery.", "img": "Images/fixmyride.png", "link": "https://github.com/HasinduBimsara", "tech": "Java Spring Boot, WebSockets, PostGIS, OSRM Spatial Engine, Live GPS, React Native, Mobile Ecosystem"}]</script>
 </body>
+
 </html>
